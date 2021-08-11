@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="./style.css" />
+</head>
+<body>
+<section>
+
+<header class="header">
+    <a href="#"><img src="./pictures/logo.png" alt="logo"></a>
+    <div class="toggle"  onclick="toggleMenu()"></div>
+    <ul class="nav">
+        <li><a href="#">На главную</a></li>
+        <li><a href="#" class="no-active">Уведомления</a></li>
+        <li><a href="#" class="no-active">Участники</a></li>
+        <li><a href="#" class="no-active">Новости</a></li>
+        <li><a href="#" class="no-active">База знаний</a></li>
+        <li><a href="#" class="no-active">Проекты</a></li>
+        <li><a href="#" class="no-active">Настройки</a></li>
+        <li><a href="#" class="button">Выйти</a></li>
+    </ul>
+</header>
+
+<nav class="navigation">
+
+    <div class="side-bar">
+        <ul>
+            <li class="list active">
+
+                <a href="#">
+                    <span class="icon"><ion-icon name="home-outline"></ion-icon></span>
+                    <span class="title">Моя страница</span>
+                </a>
+            </li>
+            <li class="list">
+
+                <a href="#">
+                    <span class="icon"><ion-icon name="mail-outline"></ion-icon></span>
+                    <span class="title">Уведомления</span>
+                </a>
+            </li>
+            <li class="list">
+
+                <a href="#">
+                    <span class="icon"><ion-icon name="people-outline"></ion-icon></span>
+                    <span class="title">Участники</span>
+                </a>
+            </li>
+            <li class="list">
+
+                <a href="#">
+                    <span class="icon"><ion-icon name="newspaper-outline"></ion-icon></span>
+                    <span class="title">Новости</span>
+                </a>
+            </li>
+            <li class="list">
+
+                <a href="#">
+                    <span class="icon col"><ion-icon name="information-circle-outline"></ion-icon></span>
+                    <span class="title col">База знаний</span>
+                </a>
+            </li>
+            <li class="list">
+
+                <a href="#">
+                    <span class="icon"><ion-icon name="bar-chart-outline"></ion-icon></span>
+                    <span class="title">Проекты</span>
+                </a>
+            </li>
+            <li class="list">
+                <a href="#">
+                    <span class="icon col"><ion-icon name="settings-outline" class="fa fa-newspaper-o" aria-hidden="true"></ion-icon></span>
+                    <span class="title col">Настройки</span>
+                </a>
+            </li>
+        </ul>
+    </div>
+
+
+</nav>
+
+<main class="container">
+
+    <div class="content">
+        <div class="box-content">
+            <h1>Проект "...": Набираем в команду</h1>
+            <div class="box">
+                <div class="recruit">
+                <img src="./pictures/rk.png" alt="rocket">
+                <h4>Набор команды</h4>
+                <span>08.04.2021</span>
+                </div>
+                <div class="robot-img">
+                    <img src="./pictures/robo2.jpg" alt="robot">
+                </div>
+                <div class="project">
+                    <h3>О проекте:</h3>
+                    <p>Описание проекта, цели, задачи ожидаемый результат/продукт</p>
+                    <h3>Период набора команды:</h3>
+                    <p>Сроки набора команды</p>
+                    <h3>Начало проекта:</h3>
+                    <p>Дата начала проекта</p>
+                    <h3>Как пропасть на проект</h3>
+                    <p>Если вам интересно принять участие в проекте, заполните анкету участника <a href="#">по ссылке</a> или кликайте по кнопке</p>
+                    <div class="button">
+                        <a href="#">Заполните анкету</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</main>
+<footer class="footer">
+    <div class="footer-box">
+        <h2>Контакты</h2>
+        <p>Телефон: +7 (968) 711 05 85</p>
+        <p>Почта: <a href="#">community@zdrav.mos.ru</a></p>
+    </div>
+
+</footer>
+</section>
+
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+<script>
+    var swiper = new Swiper(".mySwiper", {
+        effect: "coverflow",
+        grabCursor: true,
+        centeredSlides: true,
+        slidesPerView: "auto",
+        coverflowEffect: {
+            rotate: 0,
+            stretch: 0,
+            depth: 200,
+            modifier: 1,
+            slideShadows: true,
+        },
+        pagination: {
+            el: ".swiper-pagination",
+        },
+        //цикл вращенения в одном направлении
+        loop: true,
+    });
+
+    // Переключение меню (Mobile)
+    function toggleMenu(){
+        const menuToggle = document.querySelector('.toggle');
+        const navigation = document.querySelector('.nav');
+        menuToggle.classList.toggle('active');
+        navigation.classList.toggle('active');
+    }
+</script>
+<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+</body>
+</html>
